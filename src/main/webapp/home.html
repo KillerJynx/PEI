@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home</title>
+<link rel="stylesheet" href="home.css">
+</head>
+<body>
+	<div class="sidebar">
+		<h2>Menu</h2>
+		<ul>
+			<li><a href="#">Início</a></li>
+			<li><a href="#">Atividades Pendentes</a></li>
+			<li><a href="#">Alunos</a>
+				<ul>
+					<li><a href="#" id="cadastrarAluno">Cadastrar Aluno</a></li>
+					<li><a href="#" id="visualizarAluno">Visualizar Aluno</a></li>
+				</ul></li>
+		</ul>
+	</div>
+
+	<div class="content">
+		<!-- Conteúdo será carregado dinamicamente aqui -->
+	</div>
+
+	<!-- Janela modal para o formulário de cadastro de aluno -->
+	<div id="modalCadastroAluno" class="modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<h2>Cadastro de Aluno</h2>
+			<form action = "LoginServlet" id="formAluno" method="POST">
+				<label for="nome">Nome do Aluno: </label><br> 
+				<input type="text" id="nome" name="nome" required><br> 
+				
+				<label for="endereco">Endereço: </label><br> 
+				<input type="text" id="endereco" name="endereco" required><br> 
+				
+				<label for="telefone">Telefone: </label><br> 
+				<input type="tel" id="telefone" name="telefone" required><br> 
+				
+				<label for="matricula">Matrícula: </label><br> 
+				<input type="text" id="matricula" name="matricula" required><br> 
+				
+				<label for="habilidade">Habilidade: </label><br> 
+				<input type="text" id="habilidade" name="habilidade" required><br> 
+				
+				<label for="condicao">Condição:</label><br> 
+				<input type="text" id="condicao" name="condicao" required><br> 
+				
+				<label for="necessidadeEspecifica">Necessidade Específica:</label><br> 
+				<input type="text" id="necessidadeEspecifica" name="necessidadeEspecifica" required><br> 
+				
+				<label for="dificuldade">Dificuldade:</label><br> 
+				<input type="text" id="dificuldade" name="dificuldade" required><br> 
+				
+				<label for="conhecimento">Conhecimento:</label><br> 
+				<input type="text" id="conhecimento" name="conhecimento" required><br> 
+				
+				<label for="area">Área:</label><br> 
+				<input type="text" id="area" name="area" required><br> 
+				
+				<label for="niveldeusuario">Nível de Usuário:</label><br> 
+				<input type="text" id="niveldeusuario" name="niveldeusuario" required><br> 
+
+				<br>
+
+				<button type="submit">Cadastrar</button>
+			</form>
+			
+			
+
+		</div>
+	</div>
+
+	<script src="home.js"></script>
+</body>
+</html>

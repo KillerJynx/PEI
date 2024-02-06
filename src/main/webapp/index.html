@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+<meta charset="UTF-8">
+<title>Login</title>
+
+<link rel="stylesheet" href="style.css">
+<script src="index.js"></script>
+</head>
+<body>
+ 	<div class="login-container">
+        <img src="imagens/logo_pei.png" alt="Logo do site">
+        <h2>Connected Education</h2>
+        <form method="GET" action="LoginServlet">
+            <input type="text" name="matricula" placeholder="Matricula" required>
+            <br>
+            <input type="password" name="senha" id="senha" placeholder="Senha" required>
+            <br>
+            <div class="checkbox-container">
+                <input type="checkbox" id="lembrar-senha">
+                <label for="lembrar-senha">Lembrar senha</label>
+            </div>
+            <div class="checkbox-container">
+                <input type="checkbox" id="visualizar-senha" onchange="visualizarSenha()">
+                <label for="visualizar-senha">Visualizar senha</label>
+            </div>
+            <br>
+            <input type="submit" value="Login">
+        </form>
+        <div class="form-footer">
+            Ainda não tem uma conta? <a href="#">Registre-se</a>
+        </div>
+    </div>
+</body>
+</html>
